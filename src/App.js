@@ -1,12 +1,12 @@
 import './App.css';
-
-// import { Home } from './pages/Home';
-import { Cadastro } from './pages/Cadastro';
+import { BrowserRouter } from 'react-router-dom';
+import { Routes } from './routes';
 
 function App() {
   return (
-    // <Home />
-    <Cadastro />
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   );
 }
 

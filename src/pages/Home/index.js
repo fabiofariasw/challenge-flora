@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 // import {} from './styles';
 
 import { Main } from '../../components/Main';
@@ -11,8 +12,11 @@ import { Button } from '../../components/Button';
 import { ContainerSearch } from './styles';
 
 import { FiSearch } from 'react-icons/fi'
+import { FiArrowRight } from 'react-icons/fi'
 
 export function Home() {
+
+  const history = useHistory();
 
   const [data, setData] = useState([]);
   const [dataAux, setDataAux] = useState([]);
@@ -38,6 +42,10 @@ export function Home() {
     })
     setDataAux(fabio);
   }
+
+  function handleNextPage() {
+    history.push('/proposta');
+  }
   
   useEffect(() => {
     getData();
@@ -62,6 +70,7 @@ export function Home() {
         > 
           <FiSearch />
         </Button>
+        <Button style={{position: 'absolute', right: '5%'}} onClick={() => handleNextPage()}><FiArrowRight /></Button>
       </ContainerSearch>
       {/* Insira o INPUT SEARCH aqui */}
       <CardsCont>

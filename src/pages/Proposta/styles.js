@@ -60,6 +60,7 @@ export const SpanLabel = styled.div`
   display: flex;
   justify-content: space-between;
   font-family: 'Roboto';
+  color: var(--cyano-500);
   
   label {
     font-weight: 500;
@@ -68,11 +69,16 @@ export const SpanLabel = styled.div`
   p {
     font-size: 12px;
   }
+
+  span {
+    font-weight: 700;
+  }
 `;
 
 export const SubCont = styled.div`
   margin-top: 10px;
-  
+  color: var(--cyano-500);
+
   label {
     text-decoration: underline;
   }
@@ -98,6 +104,23 @@ export const LittleButton = styled.button`
   border-radius: 4px;
   cursor: pointer;
   border: none;
+  text-transform: uppercase;
+  color: var(--cyano-400);
+  font-family: 'Roboto';
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: filter 0.2s;
+
+  svg {
+    font-size: 16px;
+  }
+
+  &:hover {
+    filter: brightness(0.9);
+  }
 `;
 
 export const BigButton = styled.button`
@@ -106,9 +129,18 @@ export const BigButton = styled.button`
   border: none;
   padding: 12px 0;
   cursor: pointer;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-weight: 600;
+  color: var(--cyano-400);
+  transition: filter 0.2s;
 
   &:last-child {
     background: var(--orange);
     color: #fff;
+  }
+
+  &:hover {
+    filter: brightness(0.9);
   }
 `

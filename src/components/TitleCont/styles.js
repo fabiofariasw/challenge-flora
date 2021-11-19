@@ -8,7 +8,9 @@ export const Container = styled.div`
   font-size: 1.5rem;
 
   > h2 {
+    justify-content: center;
     color: #61787b;
+    padding: 0 100px;
     > span {
       color: orange;
     }
